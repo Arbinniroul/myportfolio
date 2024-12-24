@@ -5,7 +5,9 @@ import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
 import Projects from "./components/Projects/Projects";
 
+import favicon from './assets/dp.jpg';
 function App() {
+document.querySelector('link[rel="icon"]').href = favicon;
   return (
     <div className="bg-[#171d32] h-auto w-full overflow-hidden">
       {/* Navbar with Smooth Transition */}
