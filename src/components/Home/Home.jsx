@@ -19,9 +19,11 @@ const Home = () => {
           <li>Optimize performance and scalability</li>
           <li>Integrate APIs and backend services</li>
         </ul>
+        <a href="#Footer">
         <button className="mt-6 bg-[#3b82f6] text-[#0f172a] py-2 px-6 md:py-3 md:px-8 text-lg md:text-xl font-semibold rounded-full shadow-lg hover:shadow-2xl hover:bg-[#2563eb] transition-all duration-300 ease-in-out transform hover:scale-105">
           Contact Me
         </button>
+        </a>
       </div>
 
       {/* Right Content */}
