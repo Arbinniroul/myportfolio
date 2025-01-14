@@ -7,7 +7,7 @@ const ProjectCard = ({ title, main }) => {
   };
 
   return (
-    <div className="p-6 flex w-[450px] h-[500px] flex-col  bg-[#1a1d2e] shadow-xl rounded-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl" onClick={handleRedirect}>
+    <div className="p-6 flex w-[450px] h-[500px] flex-col  bg-[#1a1d2e] shadow-xl rounded-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" onClick={handleRedirect}>
       <img className="w-full h-48 object-cover rounded-lg mb-4" src={ProjectCard1} alt={title} />
       <h3 className="text-4xl font-semibold text-white  mb-2">{title}</h3>
       <p className="text-sm text-gray-400 mb-20">{main}</p>
