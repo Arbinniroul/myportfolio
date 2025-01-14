@@ -19,7 +19,7 @@ const Footer = () => {
       <ul className="flex flex-col gap-4 text-sm md:text-lg items-center md:items-start">
         <li className="flex gap-2 items-center hover:text-[#3498db] duration-300">
           <MdOutlineEmail size={22} />
-          <a href="mailto:myemail@gmail.com" className="hover:underline">myemail@gmail.com</a>
+          <a href="mailto:arbinniroula21@gmail.com" className="hover:underline">arbinniroula21@gmail.com</a>
         </li>
         <li className="flex gap-2 items-center hover:text-[#3498db] duration-300">
           <CiLinkedin size={22} />
@@ -29,8 +29,8 @@ const Footer = () => {
         </li>
         <li className="flex gap-2 items-center hover:text-[#3498db] duration-300">
           <FaGithub size={22} />
-          <a href="https://github.com/username" target="_blank" rel="noopener noreferrer" className="hover:underline">
-            github.com/username
+          <a href="https://github.com/Arbinniroul" target="_blank" rel="noopener noreferrer" className="hover:underline">
+          https://github.com/Arbinniroul
           </a>
         </li>
       </ul>
