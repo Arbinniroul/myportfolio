@@ -1,41 +1,23 @@
-import About from "./components/About/About";
-import Experience from "./components/Experience/Experience";
-import Footer from "./components/Footer/Footer";
-import Home from "./components/Home/Home";
-import Navbar from "./components/Navbar/Navbar";
-import Projects from "./components/Projects/Projects";
+import React, { useState } from 'react';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import About from './components/About';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
 
-import favicon from './assets/dp.jpg';
 function App() {
-document.querySelector('link[rel="icon"]').href = favicon;
+  const [darkMode, setDarkMode] = useState(false);
+
   return (
-    <div className="bg-[#171d32] h-auto w-full overflow-hidden">
-      {/* Navbar with Smooth Transition */}
-      <Navbar />
-
-      {/* Home Section */}
-      <div className="animate__animated animate__fadeIn">
-        <Home />
-      </div>
-
-      {/* About Section */}
-      <div className="transition-all duration-500 ease-in-out">
-        <About className='m-10' />
-      </div>
-
-      {/* Experience Section */}
-      <div className="transition-all duration-500 ease-in-out">
+    <div className={darkMode ? 'dark' : ''}>
+      <div className=" bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+        <Header darkMode={darkMode} toggleDarkMode={() => setDarkMode(!darkMode)} />
+        <Hero />
+        <About />
         <Experience />
-      </div>
-
-      {/* Projects Section */}
-      <div className="transition-all duration-500 ease-in-out">
         <Projects />
-      </div>
-
-      {/* Footer Section */}
-      <div className="mt-12 md:mt-20 transition-all duration-500 ease-in-out">
-        <Footer />
+        <Contact />
       </div>
     </div>
   );
