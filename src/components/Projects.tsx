@@ -9,7 +9,7 @@ const projects = [
     tags: ['React', 'Node.js', 'MongoDB', 'Express'],
     category: 'Full Stack',
     github: 'https://github.com/Arbinniroul/eCommerce-website',
-    demo: '/e-commerce-website-wv1o.vercel.app',
+    demo: 'https://e-commerce-website-wv1o.vercel.app',
   },
   {
     title: 'Task Management System',
