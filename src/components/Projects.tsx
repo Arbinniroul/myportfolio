@@ -12,22 +12,13 @@ const projects = [
     demo: 'https://e-commerce-website-wv1o.vercel.app',
   },
   {
-    title: 'Task Management System',
-    description: 'A collaborative task management system with real-time updates and team collaboration features.',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1000',
-    tags: ['React', 'Redux', 'Node.js', 'Socket.io'],
-    category: 'Full Stack',
-    github: 'https://github.com',
-    demo: 'https://example.com',
-  },
-  {
     title: 'Social Media Dashboard',
     description: 'A responsive dashboard for social media analytics with interactive charts and data visualization.',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000',
-    tags: ['React', 'D3.js', 'Tailwind CSS'],
+    tags: ['React', 'vite', 'Tailwind CSS'],
     category: 'Frontend',
-    github: 'https://github.com',
-    demo: 'https://example.com',
+    github: 'https://github.com/Arbinniroul/mediaDashboard',
+    demo: 'https://media-dashboard-sage.vercel.app',
   },
 ];
 
