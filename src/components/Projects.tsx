@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { ExternalLinkIcon, GithubIcon } from 'lucide-react';
 import ecommerce from '../assets/Screenshot 2025-01-14 at 23.19.49.png'
+import shutterEstate from '../assets/shutterState.png';
+
 const projects = [
   {
     title: 'E-Commerce Platform',
@@ -19,6 +21,15 @@ const projects = [
     category: 'Frontend',
     github: 'https://github.com/Arbinniroul/mediaDashboard',
     demo: 'https://media-dashboard-sage.vercel.app',
+  },
+  {
+    title: 'ShutterEstate- A Real Estate application',
+    description: 'A Real estate application',
+    image: shutterEstate,
+    tags: ['Vite + React + TS', 'Tailwind CSS'],
+    category: 'Frontend',
+    github: 'https://github.com/Arbinniroul/shutterState',
+    demo: 'https://shutter-state.vercel.app',
   },
 ];
 
