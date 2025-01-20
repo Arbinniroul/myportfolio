@@ -70,15 +70,16 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Right Content */}
-      <div className="relative w-48 h-48 md:w-80 md:h-80">
-        <img
-          src={avatarImg}
-          alt="Avatar"
-          className="w-full h-full object-cover rounded-full border-4 border-indigo-600 dark:border-indigo-400 shadow-lg hover:scale-105 transition-transform duration-300"
-        />
-        <div className="absolute -top-6 -right-6 w-20 h-20 md:w-32 md:h-32 bg-indigo-600 opacity-25 rounded-full blur-2xl animate-pulse"></div>
-      </div>
+   {/* Right Content */}
+<div className="relative mt-20  w-48 h-48 md:w-80 md:h-80">
+  <img
+    src={avatarImg}
+    alt="Avatar"
+    className="w-full h-full object-cover rounded-full border-4 border-indigo-600 dark:border-indigo-400 shadow-lg hover:scale-105 transition-transform duration-300"
+  />
+  <div className="absolute -top-6 -right-6 w-20 h-20 md:w-32 md:h-32 bg-indigo-600 opacity-25 rounded-full blur-2xl animate-pulse"></div>
+</div>
+
     </section>
   );
 };
