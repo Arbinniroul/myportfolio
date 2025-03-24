@@ -22,7 +22,7 @@ const Header = ({ darkMode, toggleDarkMode }: { darkMode: boolean; toggleDarkMod
       
       if (current) setActiveSection(current);
     };
-
+ 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);

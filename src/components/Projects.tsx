@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ExternalLinkIcon, GithubIcon } from 'lucide-react';
 import ecommerce from '../assets/Screenshot 2025-01-14 at 23.19.49.png'
 import shutterEstate from '../assets/shutterState.png';
+import NikeImg from '../assets/Nike.png'
 
 const projects = [
   {
@@ -30,6 +31,15 @@ const projects = [
     category: 'Frontend',
     github: 'https://github.com/Arbinniroul/shutterState',
     demo: 'https://shutter-state.vercel.app',
+  },
+  {
+    title: 'Nike Website Clone',
+    description: 'Landing Page of Nike.com',
+    image: NikeImg,
+    tags: ['Vite + React + TS', 'Tailwind CSS'],
+    category: 'Frontend',
+    github: 'https://github.com/Arbinniroul/NikeCloneWebsite',
+    demo: 'https://nike-clone-website-delta.vercel.app',
   },
 ];
 
