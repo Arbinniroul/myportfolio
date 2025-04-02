@@ -1,6 +1,6 @@
-const express = require('express');
-const cors = require('cors');
-const dotenv = require('dotenv');
+import  express  from 'express';
+import dotenv from "dotenv"
+import cors from 'cors';
 import authRouter from './routes';
 import connectDB from './connection/db';
 import vistorRoutes from './routes/visitorRoutes';
@@ -23,7 +23,7 @@ app.use('/api',vistorRoutes);
 connectDB()
   .then(() => {
     app.listen(PORT, () => {
-      console.log(`Server running on http://localhost/${process.env.PORT}`);
+      console.log(`Server running on http://localhost/${PORT}`);
     });
   })
   .catch(err => {
