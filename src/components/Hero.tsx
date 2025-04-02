@@ -37,8 +37,8 @@ const Hero = () => {
         </ul>
         <div className="flex flex-wrap items-center gap-4">
           <a
-            href="/resume.pdf"
-            download
+            href="/myresume.pdf"
+         download={`Arbin_Niroula_Resume_${new Date().getFullYear()}.pdf`}
             className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full flex items-center gap-2 transition-colors"
           >
             <DownloadIcon size={20} /> Download Resume

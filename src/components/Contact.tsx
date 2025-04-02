@@ -32,6 +32,9 @@ const Contact = () => {
       [e.target.name]: e.target.value
     }));
   };
+  const handleView=()=>{
+    
+  }
 
   return (
     <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-800">
@@ -62,7 +65,7 @@ const Contact = () => {
                   <MapPin className="w-6 h-6 text-indigo-600 dark:text-indigo-400 mt-1" />
                   <div>
                     <h4 className="font-medium text-gray-900 dark:text-white">Location</h4>
-                    <p className="text-gray-600 dark:text-gray-300">
+                    <p className="text-gray-600 dark:text-gray-300 cursor-pointer " onClick={handleView} >
                       Sanagau,Lalitpur
                     </p>
                   </div>
