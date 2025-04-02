@@ -2,13 +2,13 @@
   "name": "backend",
   "version": "1.0.0",
   "type": "commonjs",
-  "scripts": {
-    "start": "node dist/server.js",
-    "dev": "nodemon --exec ts-node src/server.ts",
-    "build": "tsc && cp src/views dist/ -r && cp src/public dist/ -r",
-    "watch": "tsc -w",
-    "prepare": "npm run build"
-  },
+ "scripts": {
+  "start": "node dist/server.js",
+  "dev": "nodemon --exec ts-node src/server.ts",
+  "build": "tsc",
+  "watch": "tsc -w",
+  "test": "echo \"Error: no test specified\" && exit 1"
+},
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
