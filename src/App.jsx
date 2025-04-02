@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Home from './Pages/Home';
 import { Route, Routes } from 'react-router-dom';
 import Login from './Pages/Login';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -15,6 +16,9 @@ function App() {
       } />
        <Route path="/login" element={
         <Login darkMode={darkMode} setDarkMode={setDarkMode} />
+      } />
+       <Route path="/admin" element={
+        <Footer darkMode={darkMode} setDarkMode={setDarkMode} />
       } />
     </Routes>
           </div>
