@@ -103,7 +103,7 @@ const Login = () => {
                 </label>
               </div>
               <a href="#" className="text-sm text-purple-400 hover:text-purple-300">
-                Forgot password?
+                Forgot to eat today?
               </a>
             </div>
 

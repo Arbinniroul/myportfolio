@@ -1,8 +1,9 @@
 import React from 'react'
+import { Dashboard } from './Dashboard'
 
 const Footer = () => {
   return (
-    <div>Admin</div>
+    <div><Dashboard/></div>
   )
 }
 

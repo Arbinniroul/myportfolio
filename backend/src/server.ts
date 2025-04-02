@@ -3,6 +3,7 @@ import cors from 'cors';
 import authRouter from './routes';
 import connectDB from './connection/db';
 import dotenv from 'dotenv';
+import vistorRoutes from './routes/visitorRoutes';
 dotenv.config();
 
 const app = express();
@@ -17,7 +18,7 @@ app.use(cors({
 
 // Routes
 app.use('/api/auth', authRouter);
-
+app.use('/api',vistorRoutes);
 
 connectDB()
   .then(() => {
