@@ -1,6 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2020",
+    "types": ["node", "cors", "dotenv"],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/types"
+    ],
     "module": "commonjs",
     "outDir": "./dist",
     "rootDir": "./src",
