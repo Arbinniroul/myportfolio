@@ -13,7 +13,7 @@
     "@remixicon/react": "^4.2.0",
     "lucide-react": "^0.344.0",
     "react-icons": "^5.2.1",
-    "react-router-dom": "^6.28.1",
+    "react-router-dom": "^6.30.0",
     "typed.js": "^2.1.0"
   },
   "devDependencies": {

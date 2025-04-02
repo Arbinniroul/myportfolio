@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Send, Mail, MapPin, Phone } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Contact = () => {
+  const Navigate=useNavigate()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -33,7 +35,7 @@ const Contact = () => {
     }));
   };
   const handleView=()=>{
-    
+Navigate('/login')
   }
 
   return (
