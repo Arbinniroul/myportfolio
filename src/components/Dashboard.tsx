@@ -6,6 +6,7 @@ import {
 } from 'recharts';
 import { Users, Monitor, Globe, Clock } from 'lucide-react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884D8'];
 
@@ -68,10 +69,10 @@ export const Dashboard: React.FC = () => {
         setVisitors(visitorsRes.data?.data || []);
         setStats({
           ...DEFAULT_STATS,
-          ...statsRes.data, // Override defaults with API data
+          ...statsRes.data, 
           deviceDistribution: {
             ...DEFAULT_STATS.deviceDistribution,
-            ...(statsRes.data?.deviceDistribution || {}) // Safe merge
+            ...(statsRes.data?.deviceDistribution || {}) 
           }
         });
       } catch (err) {
@@ -88,7 +89,7 @@ export const Dashboard: React.FC = () => {
   const statsCards = [
     {
       title: 'Total Visitors',
-      value: stats.totalVisits,
+      value: (stats.totalVisits)/2,
       icon: Users,
       color: 'bg-blue-500',
     },
@@ -111,11 +112,18 @@ export const Dashboard: React.FC = () => {
       color: 'bg-orange-500',
     },
   ];
+  const Navigate=useNavigate();
 
-  // Prepare chart data safely
+  const handleLogout = ()=>{
+      localStorage.removeItem('token');
+      Navigate('/');
+
+      
+  }
+
   const browserData = Object.entries(stats.deviceDistribution)
     .map(([name, value]) => ({ name, value }))
-    .filter(item => item.value > 0); // Only show devices with visits
+    .filter(item => item.value > 0); 
 
   if (loading) {
     return <div className="text-center py-8">Loading dashboard...</div>;
@@ -129,8 +137,9 @@ export const Dashboard: React.FC = () => {
     <div className="min-h-screen bg-gray-50 p-8">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-3xl font-bold text-gray-900 mb-8">Analytics Dashboard</h1>
+        <button onClick={handleLogout} className='px-2 py-1 bg-black text-white rounded-md hover:bg-gray-700 absolute right-0 top-4 mr-5'>Logout</button>
         
-        {/* Stats Cards */}
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {statsCards.map((card, index) => (
             <div key={index} className="bg-white rounded-lg shadow p-6">
@@ -147,9 +156,9 @@ export const Dashboard: React.FC = () => {
           ))}
         </div>
 
-        {/* Charts */}
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Visits Chart */}
+
           <div className="bg-white p-6 rounded-lg shadow">
             <h2 className="text-xl font-semibold mb-4">Visits Last 7 Days</h2>
             <div className="h-80">
@@ -171,7 +180,7 @@ export const Dashboard: React.FC = () => {
             </div>
           </div>
 
-          {/* Device Distribution Chart */}
+
           <div className="bg-white p-6 rounded-lg shadow">
             <h2 className="text-xl font-semibold mb-4">Device Distribution</h2>
             <div className="h-80">
@@ -203,7 +212,7 @@ export const Dashboard: React.FC = () => {
           </div>
         </div>
 
-        {/* Recent Visitors Table */}
+
         <div className="mt-8 bg-white rounded-lg shadow overflow-hidden">
           <h2 className="text-xl font-semibold p-6 border-b">Recent Visitors</h2>
           <div className="overflow-x-auto">
