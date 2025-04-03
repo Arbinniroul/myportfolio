@@ -18,7 +18,10 @@ app.use(cors({
   credentials: true
 }));
 
-// Routes
+app.use('/',()=>{
+  console.log("API is running...");  // This will print when server is running.
+
+})
 app.use('/api/auth', authRouter);
 app.use('/api', vistorRoutes);
 
