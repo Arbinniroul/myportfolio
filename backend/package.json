@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "type": "commonjs",
   
+  
+  
     "scripts": {
-      "dev": "vite",
-      "build": "vite build",
-      "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-      "preview": "vite preview",
-      "vercel-build": "vite build"
+      "start": "node dist/server.js",
+      "dev": "nodemon --exec ts-node src/server.ts",
+      "build": "tsc",
+      "watch": "tsc -w"
     }
+  
+  
   ,
   "dependencies": {
     "bcryptjs": "^3.0.2",
