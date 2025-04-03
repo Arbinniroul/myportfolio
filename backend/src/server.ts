@@ -1,15 +1,17 @@
-import  express  from 'express';
-import dotenv from "dotenv"
+import express from 'express';
+import dotenv from 'dotenv';
 import cors from 'cors';
 import authRouter from './routes';
 import connectDB from './connection/db';
 import vistorRoutes from './routes/visitorRoutes';
+
+// Load environment variables
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-
+// Middleware
 app.use(express.json());
 app.use(cors({
   origin: process.env.URL, 
@@ -18,12 +20,13 @@ app.use(cors({
 
 // Routes
 app.use('/api/auth', authRouter);
-app.use('/api',vistorRoutes);
+app.use('/api', vistorRoutes);
 
+// Database connection and server start
 connectDB()
   .then(() => {
     app.listen(PORT, () => {
-      console.log(`Server running on http://localhost/${PORT}`);
+      console.log(`Server running on http://localhost:${PORT}`);
     });
   })
   .catch(err => {
