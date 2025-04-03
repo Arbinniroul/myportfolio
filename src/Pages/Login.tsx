@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import apiClient from '../api/client';
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -25,7 +26,7 @@ const Login = () => {
     setError('');
 
     try {
-      const response = await axios.post('http://localhost:4000/api/auth/login', formData);
+      const response = await apiClient.post('/api/auth/login', formData)
       
 
       localStorage.setItem('token', response.data.token);

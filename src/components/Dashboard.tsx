@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { format } from 'date-fns';
+
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
   PieChart, Pie, Cell
@@ -7,6 +8,7 @@ import {
 import { Users, Monitor, Globe, Clock } from 'lucide-react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import apiClient from '../api/client';
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884D8'];
 
@@ -62,10 +64,9 @@ export const Dashboard: React.FC = () => {
     const fetchData = async () => {
       try {
         const [visitorsRes, statsRes] = await Promise.all([
-          axios.get('http://localhost:4000/api/visitors?limit=10'),
-          axios.get('http://localhost:4000/api/visitors/stats')
-        ]);
-        
+          apiClient.get('/api/visitors?limit=10'),
+          apiClient.get('/api/visitors/stats')
+        ])
         setVisitors(visitorsRes.data?.data || []);
         setStats({
           ...DEFAULT_STATS,
