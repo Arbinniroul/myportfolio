@@ -6,11 +6,12 @@
   
   
   
+  
     "scripts": {
-      "build": "tsc && mkdir -p public && cp -R dist/* public/",
-      "vercel-build": "npm install --include=dev && npm run build",
-      "start": "node dist/server.js"
+      "build": "tsc --outDir public", 
+      "vercel-build": "npm install --include=dev && npm run build"
     }
+  
   
   
   
