@@ -1,0 +1,22 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "src/server.ts",
+        "use": "@vercel/node",
+        "config": {
+          "includeFiles": ["public/**"]
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/public/server.js"
+      },
+      {
+        "src": "/ping",
+        "dest": "/public/server.js"
+      }
+    ]
+  }

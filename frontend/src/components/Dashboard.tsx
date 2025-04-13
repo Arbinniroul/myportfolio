@@ -35,7 +35,7 @@ interface StatsData {
   };
 }
 
-// Default stats structure to prevent undefined errors
+
 const DEFAULT_STATS: StatsData = {
   totalVisits: 0,
   uniqueIPs: 0,
