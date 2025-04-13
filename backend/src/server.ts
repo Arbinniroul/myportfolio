@@ -14,8 +14,14 @@ const PORT = process.env.PORT || 4000;
 
 // Middleware
 app.use(express.json());
+const allowedOrigin = process.env.URL?.trim(); 
+
+if (!allowedOrigin) {
+  console.error("CORS Error: 'process.env.URL' is not defined!");
+}
+
 app.use(cors({
-  origin: process.env.URL,
+  origin: allowedOrigin,
   credentials: true
 }));
 
