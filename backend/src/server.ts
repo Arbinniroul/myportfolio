@@ -14,14 +14,18 @@ const PORT = process.env.PORT || 4000;
 
 // Middleware
 app.use(express.json());
-const allowedOrigin = process.env.URL?.trim(); 
 
-if (!allowedOrigin) {
+const allowedOrigins = [
+  'http://localhost:5173', 
+  'https://www.arbinniroula.com.np'
+  
+];
+if (!allowedOrigins) {
   console.error("CORS Error: 'process.env.URL' is not defined!");
 }
 
 app.use(cors({
-  origin: allowedOrigin,
+  origin: allowedOrigins,
   credentials: true
 }));
 
