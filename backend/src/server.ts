@@ -12,7 +12,6 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-
 app.use(express.json());
 
 const allowedOrigins = [
@@ -20,39 +19,42 @@ const allowedOrigins = [
   'https://www.arbinniroula.com.np'
 ];
 
-if (!allowedOrigins) {
-  console.error("CORS Error: Allowed origins are not defined!");
-}
-
 app.use(cors({
   origin: allowedOrigins,
   credentials: true
 }));
 
-
+// Connect to DB
 connectDB().catch(err => {
   console.error('Database connection failed', err);
   process.exit(1);
 });
 
-// Routes
+// API Routes
 app.use('/api/auth', authRouter);
 app.use('/api', visitorRoutes);
 
+// Health Check
 app.get('/ping', (req, res) => {
   res.send('pong');
 });
 
+// Graceful handler for root route
+app.get('/', (req, res) => {
+  res.send('Welcome to the API. No frontend is served here.');
+});
 
+// Prevent 404 logs for favicon
+app.get('/favicon.ico', (req, res) => res.sendStatus(204));
+app.get('/favicon.png', (req, res) => res.sendStatus(204));
 
-
+// 404 fallback for other undefined routes
 app.use((req, res) => {
   res.status(404).json({
     status: 'error',
     message: 'Endpoint not found'
   });
 });
-
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
