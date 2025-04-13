@@ -48,7 +48,7 @@ const projects = [
     description: 'DrizzleORM practice',
     image: blogImg,
     tags: ['NextJS', 'DrizzleORM','Supabase'],
-    category: 'Frontend',
+    category: 'Backend',
     github: 'https://github.com/Arbinniroul/drizzlePractice',
     demo: 'https://practice-drizzle-git-main-orbnirrs-projects.vercel.app',
   }
