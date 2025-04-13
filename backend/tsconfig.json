@@ -7,7 +7,7 @@
       "./src/types"
     ],
     "module": "commonjs",
-    "outDir": "./src/public",
+    "outDir": "dist",
     "rootDir": "./src",  
     "strict": true,
     "esModuleInterop": true,
