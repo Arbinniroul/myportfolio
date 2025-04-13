@@ -3,6 +3,8 @@ import { ExternalLinkIcon, GithubIcon } from 'lucide-react';
 import ecommerce from '../assets/Screenshot 2025-01-14 at 23.19.49.png'
 import shutterEstate from '../assets/shutterState.png';
 import NikeImg from '../assets/Nike.png'
+import blogImg from '../assets/Blog.png'
+
 
 const projects = [
   {
@@ -41,6 +43,15 @@ const projects = [
     github: 'https://github.com/Arbinniroul/NikeCloneWebsite',
     demo: 'https://nike-clone-website-delta.vercel.app',
   },
+  {
+    title: 'Blog Application',
+    description: 'DrizzleORM practice',
+    image: blogImg,
+    tags: ['NextJS', 'DrizzleORM','Supabase'],
+    category: 'Frontend',
+    github: 'https://github.com/Arbinniroul/drizzlePractice',
+    demo: 'https://practice-drizzle-git-main-orbnirrs-projects.vercel.app',
+  }
 ];
 
 const categories = ['All', 'Full Stack', 'Frontend', 'Backend'];
