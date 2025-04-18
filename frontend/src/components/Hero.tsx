@@ -53,7 +53,7 @@ const Hero = () => {
               <GithubIcon size={24} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/arbin-niroula-3796bb2a0/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 text-gray-600 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-indigo-400 transition-colors"

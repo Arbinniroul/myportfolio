@@ -6,7 +6,7 @@ export const collectVisitorData = async (): Promise<VisitorData> => {
   const os = getOS(userAgent);
   const device = getDevice(userAgent);
 
-  // Get IP address using a public API
+
   const ipResponse = await fetch('https://api.ipify.org?format=json');
   const ipData = await ipResponse.json();
 
