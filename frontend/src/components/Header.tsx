@@ -12,10 +12,10 @@ const Header = ({ darkMode, toggleDarkMode }: { darkMode: boolean; toggleDarkMod
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       
-      // For background and shadow effect
+
       setIsScrolled(currentScrollY > 20);
       
-      // For section highlighting
+
       const sections = ['home', 'about', 'experience', 'projects', 'contact'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
@@ -28,12 +28,12 @@ const Header = ({ darkMode, toggleDarkMode }: { darkMode: boolean; toggleDarkMod
       
       if (current) setActiveSection(current);
       
-      // For show/hide on scroll behavior
+
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        // Scrolling down
+
         setShowHeader(false);
       } else if (currentScrollY < lastScrollY) {
-        // Scrolling up
+
         setShowHeader(true);
       }
 
@@ -64,7 +64,7 @@ const Header = ({ darkMode, toggleDarkMode }: { darkMode: boolean; toggleDarkMod
             Portfolio
           </a>
 
-          {/* Desktop Navigation */}
+
           <div className="hidden md:flex items-center space-x-10">
             {['home', 'about', 'experience', 'projects', 'contact'].map((item) => (
               <button
@@ -87,7 +87,7 @@ const Header = ({ darkMode, toggleDarkMode }: { darkMode: boolean; toggleDarkMod
             </button>
           </div>
 
-          {/* Mobile Navigation */}
+
           <div className="md:hidden flex items-center">
             <button
               onClick={toggleDarkMode}
@@ -104,7 +104,7 @@ const Header = ({ darkMode, toggleDarkMode }: { darkMode: boolean; toggleDarkMod
           </div>
         </div>
 
-        {/* Mobile Menu */}
+
         {isMenuOpen && (
           <div className="md:hidden absolute top-full left-0 w-full bg-white dark:bg-gray-900 shadow-lg">
             <div className="flex flex-col space-y-6 px-6 py-6">
