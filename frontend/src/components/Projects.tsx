@@ -4,6 +4,7 @@ import ecommerce from '../assets/Screenshot 2025-01-14 at 23.19.49.png'
 import shutterEstate from '../assets/shutterState.png';
 import NikeImg from '../assets/Nike.png'
 import blogImg from '../assets/Blog.png'
+import youtube from '../assets/youtubeclone.png'
 
 
 const projects = [
@@ -51,7 +52,16 @@ const projects = [
     category: 'Backend',
     github: 'https://github.com/Arbinniroul/drizzlePractice',
     demo: 'https://practice-drizzle-git-main-orbnirrs-projects.vercel.app',
-  }
+  },
+  {
+    title: 'YoutubeClone',
+    description: 'A responsive dashboard for social media analytics with interactive charts and data visualization.',
+    image: youtube,
+    tags: ['NextJS', 'Postgresql', 'Tailwind CSS','tRPC'],
+    category: 'Full Stack',
+    github: 'https://github.com/Arbinniroul/youtubeclone',
+    demo: 'https://youtubeclone-cdzu5t2rw-orbnirrs-projects.vercel.app',
+  },
 ];
 
 const categories = ['All', 'Full Stack', 'Frontend', 'Backend'];
