@@ -55,9 +55,9 @@ const projects = [
   },
   {
     title: 'YoutubeClone',
-    description: 'A responsive dashboard for social media analytics with interactive charts and data visualization.',
+    description: 'Simple Youtube clone with interactive youtube features',
     image: youtube,
-    tags: ['NextJS', 'Postgresql', 'Tailwind CSS','tRPC'],
+    tags: ['NextJS', 'Postgresql', 'Tailwind CSS'],
     category: 'Full Stack',
     github: 'https://github.com/Arbinniroul/youtubeclone',
     demo: 'https://youtubeclone-cdzu5t2rw-orbnirrs-projects.vercel.app',
