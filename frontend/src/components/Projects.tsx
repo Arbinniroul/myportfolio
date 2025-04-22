@@ -60,7 +60,7 @@ const projects = [
     tags: ['NextJS', 'Postgresql', 'Tailwind CSS'],
     category: 'Full Stack',
     github: 'https://github.com/Arbinniroul/youtubeclone',
-    demo: 'https://youtubeclone-cdzu5t2rw-orbnirrs-projects.vercel.app',
+    demo: 'https://youtubeclone-git-main-orbnirrs-projects.vercel.app/',
   },
 ];
 
