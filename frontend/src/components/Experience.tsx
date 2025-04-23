@@ -5,7 +5,7 @@ const experiences = [
 
   {
     title: 'Full Stack Developer',
-    company: 'Digital Innovations',
+
     period: '2023 - 2024',
     description: [
       'Developed and maintained multiple MERN stack applications',
@@ -14,9 +14,9 @@ const experiences = [
     ],
   },
   {
-    title: 'Junior Web Developer',
-    company: 'StartUp Hub',
-    period: '2018 - ',
+    
+    title:'Participated In several hackathons',
+    period:'2024-2025',
     description: [
       'Built responsive web applications using React.js',
       'Collaborated with UI/UX designers to implement pixel-perfect designs',
@@ -27,7 +27,7 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="experience" className="py-20 bg-gray-50 dark:bg-gray-800 ">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">
           Work Experience
@@ -57,7 +57,7 @@ const Experience = () => {
                   </div>
                 </div>
                 
-                <p className="text-indigo-600 dark:text-indigo-400 mb-4">{exp.company}</p>
+
                 
                 <ul className="space-y-2">
                   {exp.description.map((item, i) => (
