@@ -4,12 +4,16 @@ import Home from "./Pages/Home";
 import Login from "./Pages/Login";
 import Footer from "./components/Footer";
 import ProtectedRoute from "./components/ProtectedRoute";
+import { Toaster } from "sonner"; 
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
     <div className={darkMode ? "dark" : ""}>
+
+      <Toaster position="top-right" richColors />
+
       <Routes>
         <Route
           path="/"
@@ -19,7 +23,6 @@ function App() {
           path="/login"
           element={<Login darkMode={darkMode} setDarkMode={setDarkMode} />}
         />
-
         <Route
           path="/admin"
           element={

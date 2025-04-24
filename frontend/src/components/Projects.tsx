@@ -36,15 +36,6 @@ const projects = [
     demo: 'https://shutter-state.vercel.app',
   },
   {
-    title: 'Nike Website Clone',
-    description: 'Landing Page of Nike.com',
-    image: NikeImg,
-    tags: ['Vite + React + TS', 'Tailwind CSS'],
-    category: 'Frontend',
-    github: 'https://github.com/Arbinniroul/NikeCloneWebsite',
-    demo: 'https://nike-clone-website-delta.vercel.app',
-  },
-  {
     title: 'Blog Application',
     description: 'DrizzleORM practice',
     image: blogImg,

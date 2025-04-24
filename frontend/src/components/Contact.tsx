@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Send, Mail, MapPin, Phone } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-
+import {toast} from "sonner"
+import emailjs from "@emailjs/browser";
 const Contact = () => {
   const Navigate=useNavigate()
   const [formData, setFormData] = useState({
@@ -12,20 +13,27 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+  
+    try {
+      await emailjs.send(
+        "service_psbrnkd",
+        "template_eja73jm",
+        formData,
+        "BQQpU03rdInSkPk3k"
+      );
+  
+      toast.success("Email sent!");
       setSubmitted(true);
-      setFormData({ name: '', email: '', message: '' });
-      
-      setTimeout(() => {
-        setSubmitted(false);
-      }, 3000);
-    }, 1000);
+      setFormData({ name: "", email: "", message: "" });
+      setTimeout(() => setSubmitted(false), 3000);
+    } catch (error) {
+      toast.error("Failed to send email.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -150,11 +158,7 @@ Navigate('/login')
                 )}
               </button>
 
-              {submitted && (
-                <div className="text-green-600 dark:text-green-400 text-center">
-                  Thank you! Your message has been sent successfully.
-                </div>
-              )}
+          
             </form>
           </div>
         </div>
