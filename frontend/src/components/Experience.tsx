@@ -6,7 +6,7 @@ const experiences = [
   {
     title: 'Full Stack Developer',
 
-    period: '2023 - 2024',
+    period: '2024 - 2025',
     description: [
       'Developed and maintained multiple MERN stack applications',
       'Implemented real-time features using Socket.io',
@@ -32,7 +32,6 @@ const Experience = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">
           Work Experience
         </h2>
-
         <div className="max-w-3xl mx-auto">
           {experiences.map((exp, index) => (
             <div
