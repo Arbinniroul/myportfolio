@@ -5,9 +5,19 @@ import shutterEstate from '../assets/shutterState.png';
 import NikeImg from '../assets/Nike.png'
 import blogImg from '../assets/Blog.png'
 import youtube from '../assets/youtubeclone.png'
+import multitenant from '../assets/mutitenant.png'
 
 
 const projects = [
+    {
+    title: 'Multitenant Ecommerce',
+    description: 'Multi Vendor E Commerce With Nextjs, React & Stripe Connect ',
+    image: multitenant,
+    tags: ['NextJS', 'Payload', 'React'],
+    category: 'Full Stack',
+    github: 'https://github.com/Arbinniroul/multitenant_ecommerce',
+    demo: 'https://multitenant-ecommerce-git-main-orbnirrs-projects.vercel.app/',
+  },
   {
     title: 'E-Commerce Platform',
     description: 'A full-stack e-commerce platform built with MERN stack, featuring real-time inventory management and payment integration.',
