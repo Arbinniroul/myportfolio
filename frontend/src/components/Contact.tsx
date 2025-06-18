@@ -47,7 +47,7 @@ Navigate('/login')
   }
 
   return (
-    <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-800 relative">
       <div className=" mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">
           Get In Touch

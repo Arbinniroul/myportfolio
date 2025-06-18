@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import { ExternalLinkIcon, GithubIcon } from 'lucide-react';
-import ecommerce from '../assets/Screenshot 2025-01-14 at 23.19.49.png'
+import { ArrowDown, ArrowUp, ExternalLinkIcon, GithubIcon } from 'lucide-react';
+import ecommerce from '../assets/Screenshot 2025-01-14 at 23.19.49.png';
 import shutterEstate from '../assets/shutterState.png';
-import NikeImg from '../assets/Nike.png'
-import blogImg from '../assets/Blog.png'
-import youtube from '../assets/youtubeclone.png'
-import multitenant from '../assets/mutitenant.png'
-
+import NikeImg from '../assets/Nike.png';
+import blogImg from '../assets/Blog.png';
+import youtube from '../assets/youtubeclone.png';
+import multitenant from '../assets/mutitenant.png';
+import climateGrow from '../assets/ClimateGrow.png';
 
 const projects = [
-    {
+  {
     title: 'Multitenant Ecommerce',
-    description: 'Multi Vendor E Commerce With Nextjs, React & Stripe Connect ',
+    description: 'Multi Vendor E Commerce With Nextjs, React & Stripe Connect',
     image: multitenant,
     tags: ['NextJS', 'Payload', 'React'],
     category: 'Full Stack',
@@ -21,7 +21,7 @@ const projects = [
   {
     title: 'E-Commerce Platform',
     description: 'A full-stack e-commerce platform built with MERN stack, featuring real-time inventory management and payment integration.',
-    image:ecommerce,
+    image: ecommerce,
     tags: ['React', 'Node.js', 'MongoDB', 'Express'],
     category: 'Full Stack',
     github: 'https://github.com/Arbinniroul/eCommerce-website',
@@ -49,7 +49,7 @@ const projects = [
     title: 'Blog Application',
     description: 'DrizzleORM practice',
     image: blogImg,
-    tags: ['NextJS', 'DrizzleORM','Supabase'],
+    tags: ['NextJS', 'DrizzleORM', 'Supabase'],
     category: 'Backend',
     github: 'https://github.com/Arbinniroul/drizzlePractice',
     demo: 'https://practice-drizzle-git-main-orbnirrs-projects.vercel.app',
@@ -63,19 +63,36 @@ const projects = [
     github: 'https://github.com/Arbinniroul/youtubeclone',
     demo: 'https://youtubeclone-git-main-orbnirrs-projects.vercel.app/',
   },
+  {
+    title: 'Climate grow',
+    description: 'Environmental dashboard with real-time visualizations with trained model for farmers. Combines climate data with agricultural insights.',
+    image: climateGrow,
+    tags: ['Python', 'MERN', 'leaflet js'],
+    category: 'Full Stack',
+    github: 'https://github.com/Arbinniroul/hackathonProject',
+    demo: 'https://climategrow.vercel.app',
+  },
 ];
 
 const categories = ['All', 'Full Stack', 'Frontend', 'Backend'];
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState('All');
+  const [visibleProjects, setVisibleProjects] = useState(6);
+  const [showAll, setShowAll] = useState(false);
 
   const filteredProjects = projects.filter(
     project => activeCategory === 'All' || project.category === activeCategory
   );
 
+  const projectsToShow = showAll ? filteredProjects : filteredProjects.slice(0, visibleProjects);
+
+  const toggleShowAll = () => {
+    setShowAll(!showAll);
+  };
+
   return (
-    <section id="projects" className="py-20 bg-white dark:bg-gray-900">
+    <section id="projects" className="py-20 bg-white dark:bg-gray-900 relative">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">
           Featured Projects
@@ -85,7 +102,10 @@ const Projects = () => {
           {categories.map((category) => (
             <button
               key={category}
-              onClick={() => setActiveCategory(category)}
+              onClick={() => {
+                setActiveCategory(category);
+                setShowAll(false);
+              }}
               className={`px-6 py-2 rounded-full transition-colors ${
                 activeCategory === category
                   ? 'bg-indigo-600 text-white'
@@ -98,7 +118,7 @@ const Projects = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project, index) => (
+          {projectsToShow.map((project, index) => (
             <div
               key={index}
               className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition-transform hover:-translate-y-2"
@@ -150,6 +170,32 @@ const Projects = () => {
             </div>
           ))}
         </div>
+
+        {filteredProjects.length > visibleProjects && !showAll && (
+          <div className="flex justify-center mt-10">
+            <button
+              onClick={toggleShowAll}
+              className="px-6 py-3 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition-colors flex items-center gap-2"
+            >
+              See More Projects
+                          <ArrowDown size={'18'}/>
+
+            </button>
+          </div>
+        )}
+
+        {showAll && (
+          <div className="flex justify-center mt-10">
+            <button
+              onClick={toggleShowAll}
+              className="px-6 py-3 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition-colors flex items-center gap-2"
+            >
+              Show Less
+                          <ArrowDown size={'18'}/>
+            
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
