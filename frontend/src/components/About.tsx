@@ -28,7 +28,7 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-              I'm a passionate MERN Stack Developer with 2+ years of experience in building
+              I'm a passionate MERN Stack Developer with 1+ years of experience in building
               scalable web applications. My journey in web development started with a
               curiosity about how things work on the internet, which led me to dive deep
               into modern web technologies.
